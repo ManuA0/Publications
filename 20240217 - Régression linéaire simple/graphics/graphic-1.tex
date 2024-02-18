@@ -1,0 +1,55 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel={$x$},
+			ylabel={$y$},
+			legend pos=north east,
+			grid=major,
+			xmin=54, xmax=125,
+			ymin=65, ymax=105,
+			axis x line=middle, 
+			axis y line=middle, 
+			samples=1000, 
+			xlabel = $x$, 
+			ylabel=$y$,
+			enlargelimits,
+			xlabel style={at={(ticklabel* cs:1.05)}, anchor=west}, % Place le nom de l'axe x à droite de l'axe
+			ylabel style={at={(ticklabel* cs:1.05)}, anchor=south}, % Place le nom de l'axe y au-dessus de l'axe
+			width=17cm,
+			]
+			
+			\addplot[mark=*, only marks] coordinates {
+				(58.1,68.6)
+				(63.5,70.2)
+				(61.3,70)
+				(60.5,71)
+				(63.8,77.3)
+				(67.1,91.7)
+				(69.6,101.8)
+				(67.2,91.4)
+				(68.8,92.2)
+				(70.9,89.5)
+				(74.7,92.3)
+				(83.4,97)
+				(85.5,97.1)
+				(86.5,96.4)
+				(100.5,99.8)
+				(100.2,99.4)
+				(102.1,99.7)
+				(100,100)
+				(102.1,101.4)
+				(105.2,101.8)
+				(105.82,103.2)
+				(106.31,102.84)
+				(107.84,102.14)
+				(112.35,102.89)
+				(120.97,104.47)
+				
+			};
+			
+			%\addplot[domain=50:130, line width=0.95pt]{0.3473297*x+ 7.89647} node[pos=0.95, anchor=east]{$\text{1.116545}x+\text{1.258177}$};
+			
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
