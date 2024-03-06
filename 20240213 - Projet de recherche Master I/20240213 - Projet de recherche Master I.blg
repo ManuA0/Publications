@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: 20240213 - Projet de recherche Master I.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apacite.bst
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: bibliographie/bibliographie.bib
+I was expecting a `,' or a `}'---line 23 of file bibliographie/bibliographie.bib
+ : 
+ : @inproceedings{simeon2018jeunes,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Warning--No journal in franccoisuniversites
+You've used 6 entries,
+            6951 wiz_defined-function locations,
+            1295 strings with 11705 characters,
+and the built_in function-call counts, 9599 in all, are:
+= -- 1239
+> -- 45
+< -- 439
++ -- 435
+- -- 8
+* -- 571
+:= -- 1747
+add.period$ -- 26
+call.type$ -- 6
+change.case$ -- 49
+chr.to.int$ -- 0
+cite$ -- 13
+duplicate$ -- 184
+empty$ -- 433
+format.name$ -- 56
+if$ -- 1904
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 0
+newline$ -- 125
+num.names$ -- 32
+pop$ -- 288
+preamble$ -- 1
+purify$ -- 18
+quote$ -- 0
+skip$ -- 604
+stack$ -- 0
+substring$ -- 480
+swap$ -- 110
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 592
+warning$ -- 1
+while$ -- 21
+width$ -- 0
+write$ -- 140
+(There was 1 error message)

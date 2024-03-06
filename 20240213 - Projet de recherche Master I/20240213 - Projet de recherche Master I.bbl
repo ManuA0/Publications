@@ -1,0 +1,137 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {Ethnie - Wikipédia}}{%
+\APACcitebtitle {Ethnie - Wikipédia}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+wiki_ethnie}
+\APACinsertmetastar {%
+wiki_ethnie}%
+\APACrefbtitle {Ethnie - Wikipédia.} {Ethnie - wikipédia.}
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APAChowpublished
+  {\url{https://fr.wikipedia.org/wiki/Ethnie\#:\textasciitilde:text=Une\%20ethnie\%20ou\%20un\%20groupe,d'un\%20mode\%20de\%20vie\%E2\%80\%A6}}.
+\newblock
+\APACrefnote{Consulté le 23 février 2024}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {Forum sur la coopération sino-africaine}}{%
+\APACcitebtitle {Forum sur la coopération sino-africaine}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+focac}
+\APACinsertmetastar {%
+focac}%
+\APACrefbtitle {Forum sur la coopération sino-africaine.} {Forum sur la
+  coopération sino-africaine.}
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APAChowpublished {\url{http://www.focac.org/fra/ltjj_4/ltffcy/ktdw/}}.
+\newblock
+\APACrefnote{Consulté le 23 février 2024}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fran{\c{c}}ois%
+}{%
+Fran{\c{c}}ois%
+}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+franccoisuniversites}
+\APACinsertmetastar {%
+franccoisuniversites}%
+\begin{APACrefauthors}%
+Fran{\c{c}}ois, D\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {LES UNIVERSIT{\'E}S NUM{\'E}RIQUES ET PROMOTION DE
+  L’EMPLOYABILIT{\'E} EN AFRIQUE: CAS DE L’UNIVERSIT{\'E} VIRTUELLE DE
+  C{\^O}TE D’IVOIRE (UVCI)} {Les universit{\'e}s num{\'e}riques et promotion
+  de l’employabilit{\'e} en afrique: Cas de l’universit{\'e} virtuelle de
+  c{\^o}te d’ivoire (uvci)}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+N'Gratier%
+}{%
+N'Gratier%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+n2015employabilite}
+\APACinsertmetastar {%
+n2015employabilite}%
+\begin{APACrefauthors}%
+N'Gratier, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2015}.
+\newblock
+\APACrefbtitle {Employabilit{\'e} des jeunes en C{\^o}te d'Ivoire}
+  {Employabilit{\'e} des jeunes en c{\^o}te d'ivoire}.
+\newblock
+\APACaddressPublisher{}{{\'E}ditions universitaires europ{\'e}ennes}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+N’Guessan%
+}{%
+N’Guessan%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+n2015analyse}
+\APACinsertmetastar {%
+n2015analyse}%
+\begin{APACrefauthors}%
+N’Guessan, C\BPBI F\BHBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Analyse des d{\'e}terminants de l’intensit{\'e} de la
+  recherche d’emploi en C{\^o}te d’Ivoire} {Analyse des d{\'e}terminants de
+  l’intensit{\'e} de la recherche d’emploi en c{\^o}te d’ivoire}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{L'Actualit{\'e} {\'e}conomique}{91}{3}{339--366}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sim{\'e}on%
+}{%
+Sim{\'e}on%
+}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+simeon2018jeunes}
+\APACinsertmetastar {%
+simeon2018jeunes}%
+\begin{APACrefauthors}%
+Sim{\'e}on, A\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Les Jeunes Face au D{\'e}fi De L’emploi {\`A}
+  Bouak{\'e}} {Les jeunes face au d{\'e}fi de l’emploi {\`a}
+  bouak{\'e}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {13th INTERNATIONAL SCIENTIFIC FORUM, ISF 2018} {13th
+  international scientific forum, isf 2018}\ (\BPG~12-26).
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
