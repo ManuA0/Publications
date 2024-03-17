@@ -2,6 +2,16 @@
 *.log
 *.out
 *.synctex.gz
+*.bbl
+*.blg
+*.toc
+*.run.xml
+*.bcf
+*.glsdefs
+*.glo
+*.idx
+*.ist
 *.lof
-*.lot
 *.nlo
+*.xdy
+*.lot
