@@ -1,0 +1,21 @@
+\chapter{Graphique n°1}
+
+\begin{tikzpicture}
+	\begin{axis}[xmin=-5,
+		xmax=5, 
+		ymin=-15, 
+		ymax=15, 
+		axis x line=middle, 
+		axis y line=middle, 
+		samples=500, 
+		xlabel = $x$, 
+		ylabel=$f(x)$, 
+		width=15cm]
+		\addplot[domain=0:5, color=red]{1/(x*ln(x))};
+		\addplot[domain=-5:5, color=blue]{-(exp(1)*x)+1};
+		
+	\end{axis}
+\end{tikzpicture}\\
+\begin{center}
+	$\displaystyle f(x)=\frac{1}{x \ln(x)}$
+\end{center}

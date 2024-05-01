@@ -1,0 +1,269 @@
+\documentclass[a4paper, 12pt, openany]{book}
+\input{C:/Users/Emmanuel/Documents/latex-files/preambule/preambule}
+
+
+\begin{document}
+
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+	\newgeometry{margin=1cm}
+	\begin{tikzpicture}[remember picture, overlay]
+		\draw[line width=1.6pt](current page text area.south west) rectangle(current page text area.north east);
+	\end{tikzpicture}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+	
+	%\center % Centre everything on the page
+	
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+	\centering
+	\textsc{\large MINISTÈRE DE L’ENSEIGNEMENT SUPÉRIEUR ET DE LA RECHERCHE SCIENTIFIQUE DE CÔTE D'IVOIRE}\\%[1.5cm] % Main heading such as the name of your university/college
+	%\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\textwidth]{C:/Users/Emmanuel/Documents/latex-files/Photos/others/download.png}
+	%\end{figure}
+	\textsc{\large \\\textbf{UFR} : SCIENCES ÉCONOMIQUES ET DÉVELOPPEMENT}\\[0.5cm] % Major heading such as UFR name
+	\textsc{\large \textbf{Option} : Économie}\\[0.5cm] % Major heading such as course name
+	
+	 % Minor heading such as course title
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\HRule\\[0.4cm]
+	\fontsize{20}{1.5}{ \bfseries DEVOIR DE LOGICIELS D'ÉCONOMÉTRIE}\\[0.4cm] % Title of your document
+	
+	\HRule\\[1cm]
+	
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\small
+			\textit{\textbf{Étudiant}}\\
+			\textsc{Assohou} Tano Franck Emmanuel 
+			(\textbf{CI0321003010}) % Your name
+			 
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{.4\textwidth}
+		\begin{flushright}
+			\small
+			\textit{\textbf{Enseignant}}\\
+			 \textsc{Dr NAHOUSSÉ} % Supervisor's name
+		\end{flushright}
+	\end{minipage}
+	
+	% If you don't want a supervisor, uncomment the two lines below and comment the code above
+	%{\large\textit{Author}}\\
+	%John \textsc{Smith} % Your name
+	
+	%------------------------------------------------
+	%	Date
+	%------------------------------------------------
+	
+	\vfill\vfill\vfill % Position the date 3/4 down the remaining page
+	
+	{\large 2022 - 2023} % Date, change the \today to a set date if you want to be precise
+	
+	%------------------------------------------------
+	%	Logo
+	%------------------------------------------------
+	
+	%\vfill\vfill
+	%\includegraphics[width=0.2\textwidth]{}\\[1cm] % Include a department/university logo - this will require the graphicx package
+	 
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Push the date up 1/4 of the remaining page
+	
+\end{titlepage}
+
+%\maketitle{}
+\tableofcontents
+
+\newpage
+En utilisant les données du tableau 1,  estimons le modèle de régression linéaire multiple suivant 
+$Conso\_pub_t=alpha+\beta Force\_travail_t+\delta IDE_t+\gamma inflation_t+\varepsilon_t$,  tels que $Conso\_pub$ désigne les dépenses de consommation publique ;  $Force\_travail$ : le taux d’emploi ;IDE : les investissements directs étrangers et inflation : l’indice des prix à la consommation, grâce au logiciel STATA 16. Puis, nous interprèterons les résultats après avoir effectué les tests post estimation.
+
+\section{Existence de corrélation entre les différentes variables}
+\vspace*{-.5cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.65\textwidth]{C:/Users/Emmanuel/Documents/latex-files/Photos/others/corrélation.jpg}
+    \caption{Tableau de corrélation}
+    \label{}
+\end{figure}
+Le tableau ci-dessus a été obtenu en utilisant la méthode \colorbox{black}{\textcolor{white}{\texttt{correlate}}}.
+En effet, il existe une corrélation négative entre la plupart des variables exceptées entre la variable $Force\_travail$ et les variables $conso\_pub$ et $inflation$, qui elles sont liées de manière positive. Ainsi, tout comme le taux d'emploi et les dépenses de consommation publique, le taux de l'emploi et l'inflation varient dans le même sens.
+
+\vspace*{-0.8cm}
+\section{Régression linéaire multiple}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.65\textwidth]{C:/Users/Emmanuel/Documents/latex-files/Photos/others/regression.jpg}
+    \caption{Tableau de regression multiple linéaire}
+    \label{}
+    
+\end{figure}
+
+En utilisant la méthode \colorbox{black}{\textcolor{white}{\texttt{regress}}} on obtient le tableau ci-dessus, donnant les différentes valeurs des coefficients du modèle et des informations supplémentaires relatives au modèle. Cela nous permet donc d'écrire que la régression multiple linéaire de exercice est :
+\vspace*{-.5cm}
+\begin{multline*}
+	Conso\_pub_t= -1.136147\ +\ 0.2566749\ Force\_travail_t\ ‐ \ 0.5691375\ IDE_t\ \\‐ \ 0.1695814\ inflation_t\ +\ \hat{\varepsilon}_t
+\end{multline*}
+\vspace*{-1.5cm}
+\begin{spacing}{1.4}
+À ce niveau nous ne pouvons pas interpréter le modèle. Toutefois, connaissant le coefficient de régression multiple $R^2$ , il nous est possible d'affirmer que les variables $force\_travail$, $IDE$ et $inflation$ expliquent à 48.72\% notre modèle.
+\end{spacing}
+\vspace*{-0.5cm}
+\section{Normalité des erreurs}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.65\textwidth]{C:/Users/Emmanuel/Documents/latex-files/Photos/others/Sktest residuals.jpg}
+    \caption{Tableau du test de normalité des résidus}
+\end{figure}
+Pour cette tâche, après avoir prédit les erreurs du modèle grâce à
+la méthode \colorbox{black}{\textcolor{white}{\texttt{predict}}}, nous avons utilisé l'un des tests de normalité donné par la fonction \colorbox{black}{\textcolor{white}{\texttt{sktest}}}. Ce qui nous a permis d'avoir le ableau ci-dessus, résumant les résultats du test.
+
+Ainsi, on a $p-value=0.0349\%$.
+\begin{itemize} [label=$\bullet$]
+    \item \textbf{Comparons \textit{p-value} à 5\%.} 
+\end{itemize}
+
+Au risque de rejet de l'hypothèse nulle de normalité des erreurs, nous pouvons constater que
+$p-value<5\%$. Par conséquent, les erreurs du modèle ne suivent pas une loi normale car en plus de 
+la comparaison faite plus haut, probabilité de se tromper est de 3.49\%.
+
+%\vspace*{-.8cm}
+\section{Les tests de significativité}
+\subsection{Test de significativité globale}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.65\textwidth]{C:/Users/Emmanuel/Documents/latex-files/Photos/others/Test de significativité globale.jpg}
+    \caption{Tableau du test de significativité globale des variables du modèle}
+\end{figure}
+
+\noindent Ce résultat a été obtenu grâce à la fonction \colorbox{black}{\textcolor{white}{\texttt{test}}} de 
+STATA 16. Sachant que nous avons $F(3, 25)= 7.92$, faisons donc une comparaison avec le quartiles 
+d'ordre 0.95. Pour un test à 5\% à savoir ${F_{0.95}(3, 25)$ $={2.99124091}}$
+ Nous constatons que : $F(3, 25)>F_{0.95}(3, 25)$\footnote{INVERSE.LOI.F.DROITE(0.05;3;25) dans Excel.}, donc le modèle est globalement significatif. 
+Il s'en suit que les variables $Force\_travail$, $inflation$ et $IDE$ apportent de l'information
+nécessaire à la compréhension des dépenses de consommation publique.
+
+\subsection{Test de significativité individuelle}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.65\textwidth]{C:/Users/Emmanuel/Documents/latex-files/Photos/others/Stata output2_Page_2 (2).jpg}
+    \caption{Tableau des tests de significativité individuelle}
+\end{figure}
+
+On peut remarquer que le tableau obtenu grâce à la méthode \colorbox{black}{\textcolor{white}{\texttt{ttest}}}
+nous donne des informations nécessaires pour tester l'hypothèse de significativité 
+des variables $Force\_travail, IDE$ et \textit{inflation}.
+Sous $H_0$ : $t_{\hat{Force\_travail}}(28)=96.6329$. \newpage \noindent Au risque de 5\%, $t_{0.975}(28) = 2.048407142\footnote{LOI.STUDENT.INVERSE(0.05;28) dans Excel.}$, 
+nous constatons que le coefficient $\beta$ associé à ($Force\_travail_t$ — \ \textit{taux de l'emploi}) 
+est significatif
+puisque:  $$\left|t_{{\hat{Force\_travail_t}}(28)}\right|>{t_{0.975}}(28)=2.048407142$$
+De même par analogie, on a sous $H_0$ :
+\begin{equation*}
+    \begin{cases}
+        t_{\hat{IDE}}(28)=8.4987 \\ 
+        t_{\hat{inflation}}(28)=3.7403
+    \end{cases}
+\end{equation*}
+
+Par conséquent, au risque de 5\%, les variables $IDE$ et $inflation$ sont toutes deux 
+individuellement significatives car :
+\begin{equation*}
+    \begin{cases}
+        \left|t_{\hat{IDE}}\right| > t_{0.975} \\ 
+        \left|t_{\hat{inflation}}\right| > t_{0.975}
+    \end{cases}
+\end{equation*}
+
+En somme, toutes les variables du modèle semblent contribuer à apporter de l'information significative
+de manière individuelle dans l'explication de la variable $conso\_publique$.
+
+\section{Hétéroscédasticité}
+
+\hspace*{.8cm}Utilisons la fonction \colorbox{black}{\textcolor{white}{\texttt{httest}}} pour générer le \texttt{«test Breusch‐Pagan»}
+afin de savoir s'il existe des variables dans notre modèle qui évoluent plus vite que les autres
+dans l'optique de nous informer sur l'existence d'un biais dans notre modèle.
+L'image ci-dessous montre les résultats du test.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.65\textwidth]{C:/Users/Emmanuel/Documents/latex-files/Photos/others/hétéroscédatiscity.jpg}
+    \caption{Test de Breusch-Pagan}
+\end{figure}
+\noindent On obtient donc comme résultats : $\chi^2(1)=0.16$ et sa \textit{p-value} $\alpha'=0.6922$.
+En comparant $\alpha'$ à 5\%, on conclut qu'il y a absence d'hétéroscédasticité car $\alpha'$ est 
+largement supérieur à $\alpha = 5\%$.
+\linebreak
+\section{Autocorrélation des erreurs}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{C:/Users/Emmanuel/Documents/latex-files/Photos/others/dwat~2.jpg}
+    \caption{Test de Durbin-Watson}
+\end{figure}
+
+À l'issue du test de \texttt{"Durbin-Watson"} permis grâce à la méthode \colorbox{black}{\textcolor{white}{\texttt{estat dwatson}}}, 
+nous avons obtenu une valeur qui n’est à la fois ni trop proche de 0 et de 2.
+Par conséquent, le recours à la table de Durbin-Watson est nécessaire pour porter un jugement sur ce résultat.
+Au risque de 10\%, on lit dans la table de \texttt{Durbin et Watson}\footnote{La table de \texttt{Durbin et Watson} a été téléchargée via ce lien : \url{https://gwenn.parent.free.fr/documents/dw.pdf}} à $k'=4$ et $n=29$ que $d_1 =1.12$ et
+$d_2 = 1.74$. La valeur de la statistique DW (1.424164) se situe donc entre de $d_1$ et $d_2$, 
+nous pouvons par conséquent supposer qu'il y a une absence d’autocorrélation des résidus.
+
+\section{Estimation finale du modèle de régression linéaire multiple }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{C:/Users/Emmanuel/Documents/latex-files/Photos/others/dernière regression.jpg}
+    \caption{Nouvelle régression linéaire multiple}
+\end{figure}
+\begin{spacing}{1.3}
+
+À cause de la non-normalité des erreurs, il était nécessaire de réestimer le modèle en tenant 
+compte de cet aspect. Pour cela, nous avons utilisé la méthode \colorbox{black}{\textcolor{white}{\texttt{regress} [\textit{list var}], \texttt{robust}}}. On obtient le tableau ci-dessus
+et le modèle reste par conséquent le même car les coefficients de la nouvelle régression sont identiques à la précédente.
+\end{spacing}
+\vspace*{-1cm}
+\begin{multline*}
+	Conso\_pub_t= -1.136147\ +\ 0.2566749\ Force\_travail_t\ ‐ \ 0.5691375\ IDE_t\ \\‐ \ 0.1695814\ inflation_t\ +\ \hat{\varepsilon}_t
+\end{multline*}
+\linebreak
+Toutefois, l'on peut noter un changement au niveau des écarts types des résidus (\textit{colonne} \colorbox{black}{\textcolor{white}{\texttt{Std.Err}}}) et
+ des autres valeurs du tableau.
+%\newpage
+\section{Interprétations}
+%\enlargethispage{1\baselineskip}
+
+\hspace{.8cm}Finalement, le modèle obtenu grâce à la régression multiple des données du tableau 1 est le suivant: 
+\vspace*{-0.5cm}
+\begin{multline*}
+    Conso\_pub_t= -1.136147\ +\ 0.2566749\ Force\_travail_t\ ‐ \ 0.5691375\ IDE_t\ \\ ‐ \ 0.1695814\ inflation_t\ +\ \hat{\varepsilon}_t
+\end{multline*}
+
+Ce modèle reste la meilleure régression linéaire multiple décrivant les dépenses de consommation publique,
+jusqu'à preuve du contraire. En outre, à l'issue de toutes les vérifications faites plus haut sur le modèle,
+nous pouvons maintenant faire les interprétations suivantes :
+\begin{itemize}[label=$\bullet$]
+    \item Les dépenses de consommation publique s'expliquent à la fois de manière individuelle et globale par le taux d'emploi, les investissements directs étrangers et l'indice des prix à la consommation.
+    \item La variation de $+25.67\%$ du taux d'emploi entraîne une variation de 1\% des dépenses de consommation publique.
+    \item Cependant, la variation des investissements directs étrangers de $-56.91\%$ ou celle de l'indice des prix à la consommation de $‐16.96\%$ entraîne une variation de 1\% des dépenses de consommation publique.
+    \item De manière générale, la variation des dépenses de consommation publique est causée à $48.72\%$ par le taux de l'emploi, les investissements directs étrangers et l'indice des prix à la consommation.
+\end{itemize}
+
+\end{document}
+
+
+
+
+
+
+
