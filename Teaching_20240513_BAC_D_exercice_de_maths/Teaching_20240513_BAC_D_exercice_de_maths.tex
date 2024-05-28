@@ -1,0 +1,54 @@
+\documentclass[12pt, openany]{book}
+\input{C:/Users/Emmanuel/Documents/LaTeX_&_CODING_FILES/latex-files/preambule/preambule}
+
+\begin{document}
+	$$\left(\ln(f)\right)'=\dfrac{f'}{f} \ , \ \left(\sqrt{f}\right)'=\dfrac{f'}{2\sqrt{f}} \ , \ \ln(a\times b)= \ln(a)+\ln(b) \,\ \ln\left(\dfrac{a}{b}\right)=\ln(a)-\ln(b)$$
+	\textbf{Formule de l'intégration par parties :} $\displaystyle{\int_{a}^{b}u'(x)v(x)\ dx=\left[u(x)v(x)\right]_a^b-\int_{a}^{b}v'(x)u(x)}\ dx$\\
+	
+	Pour $f(x)=\ln\left(x+\sqrt{x^2+2}\right)$; on a :
+	\begin{align}
+		f'(x)&=\dfrac{1+\dfrac{2x}{2\sqrt{x^2+2}}}{x+\sqrt{x^2+2}}\\
+		&= \dfrac{\dfrac{2\sqrt{x^2+2}+2x}{2\sqrt{x^2+2}}}{x+\sqrt{x^2+2}}\\
+		&=\dfrac{2\left(\sqrt{x^2+2}+x\right)}{2\sqrt{x^2+2}\left(x+\sqrt{x^2+2}\right)}\\
+		f'(x)&=\dfrac{1}{\sqrt{x^2+2}}
+	\end{align}
+	
+	Par conséquent, pour $I=\displaystyle{\int_{0}^{1}\dfrac{1}{\sqrt{x^2+2}} \ dx}$ on en déduit que :
+	\begin{align}
+		I&=\displaystyle{\int_{0}^{1}\dfrac{1}{\sqrt{x^2+2}}\ dx=\int_{0}^{1}f'(x)\ dx}\\
+		&= \left[\ln\left(x+\sqrt{x^2+2}\right)\right]_0^1\\
+		&=\ln(1+\sqrt{3}) - \ln(\sqrt{2})\\
+		I&=\ln\left(\dfrac{1+\sqrt{3}}{\sqrt{2}}\right)=\ln\left(\dfrac{\sqrt{2}+\sqrt{6}}{2}\right)
+	\end{align}
+	
+	La moyenne de la fonction $f$ définie sur $[0;1]$ par $x\mapsto\ln\left(x+\sqrt{x^2+2}\right)$ serait :
+	$$\dfrac{f(0)+f(1)}{2}=\dfrac{\ln\sqrt{2}+\ln(1+\sqrt{3})}{2}=\dfrac{\ln(\sqrt{2}+\sqrt{6})}{2}$$
+	
+	De plus :
+	\begin{align}
+		J+2I&=\displaystyle{\int_{0}^{1}\dfrac{x^2}{\sqrt{x^2+2}}\ dx+2\int_{0}^{1}\dfrac{1}{\sqrt{x^2+2\ dx}\\
+		&=\displaystyle{\int_{0}^{1}\dfrac{x^2}{\sqrt{x^2+2}}\ dx+\dfrac{2}{\sqrt{x^2+2}}\ dx}\\
+		&=\displaystyle{\int_{0}^{1}\dfrac{x^2+2}{\sqrt{x^2+2}}\ dx}\\
+		&=\displaystyle{\int_{0}^{1}\dfrac{\sqrt{x^2+2}^2}{\sqrt{x^2+2}}\ dx}\\
+		&=\displaystyle{\int_{0}^{1}\sqrt{x^2+2}\ dx}\\
+		J+2I&=K
+	\end{align}
+
+	En intégrant par parties $K=\displaystyle{\int_{0}^{1}\sqrt{x^2+2}\ dx}$ on a :
+	\begin{align}
+		K&=\displaystyle{\left[x\sqrt{x^2+2}\right]_0^1 - \int_{0}^{1}\dfrac{x^2}{\sqrt{x^2+2}}\ dx}\\
+		K&=\sqrt{3}-J
+	\end{align}
+	
+	En posant $K=K$, on obtient des questions précédentes : 
+	\begin{align}
+		J+2I&=\sqrt{3}-J\\
+		2J+2I&=\sqrt{3}\\
+		J+I&=\dfrac{\sqrt{3}}{2}
+	\end{align}
+	Comme $I=\ln\left(\dfrac{\sqrt{2}+\sqrt{6}}{2}\right)$, on peut conclure que :
+	$$J=\dfrac{\sqrt{3}}{2}-\ln\left(\dfrac{\sqrt{2}+\sqrt{6}}{2}\right)$$
+	
+	Donc $K=\sqrt{3}-\left(\dfrac{\sqrt{3}}{2}-\ln\left(\dfrac{\sqrt{2}+\sqrt{6}}{2}\right)\right)=\dfrac{\sqrt{3}}{2}+\ln\left(\dfrac{\sqrt{2}+\sqrt{6}}{2}\right)$
+	
+\end{document}
